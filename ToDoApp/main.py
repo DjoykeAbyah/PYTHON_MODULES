@@ -1,10 +1,17 @@
-user_prompt = "Please enter a todo: "
+user_prompt = "Please enter add or show or exit: "
 todos = []
 
 while True:
-    todo = input(user_prompt)
-    # method refers to object
-    print(todo.upper())
-    # python method attached to data types only for lists
-    todos.append(todo)
-    print(todos)
+    user_action = input(user_prompt)
+    user_action = user_action.strip()
+
+    match user_action:
+        case "add":
+            todo = input("Enter a todo: ")
+            todos.append(todo)
+        case "show":
+            for item in todos:
+                print(item.capitalize())
+        case "exit":
+            break
+print("Bye")
