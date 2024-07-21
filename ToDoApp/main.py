@@ -1,11 +1,10 @@
 user_prompt = "Please enter a todo: "
-todo1 = input(user_prompt)
-todo2 = input(user_prompt)
-todo3 = input(user_prompt)
+todos = []
 
-# python list
-todos = [todo1, todo2, todo3, "hi"]
-print(todos)
-
-# shows type of variable
-print(type(todos))
+while True:
+    todo = input(user_prompt)
+    # method refers to object
+    print(todo.upper())
+    # python method attached to data types only for lists
+    todos.append(todo)
+    print(todos)
