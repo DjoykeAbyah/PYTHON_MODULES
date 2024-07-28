@@ -1,0 +1,1 @@
+Determine whether the door has a knob, lever, or push/pull mechanism.
