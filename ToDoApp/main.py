@@ -57,4 +57,4 @@ while True:
 
         case "exit":
             break
-print("Bye")
+print("Bye now")
