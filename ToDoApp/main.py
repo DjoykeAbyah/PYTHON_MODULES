@@ -45,10 +45,15 @@ while True:
             with open("files/todos.txt", 'r') as file:
                 todos = file.readlines()  # returns list
 
-            todos.pop(number - 1)  # removes item with index number
+            index = number - 1
+            todo_to_remove = todos[index].strip('\n')  # removes \n from string
+            todos.pop(index)  # removes item with index number
 
             with open("files/todos.txt", 'w') as file:
                 file.writelines(todos)  # Save changes back to the file
+
+            message = f"Todo {todo_to_remove} was removed from the list."
+            print(message)
 
         case "exit":
             break
