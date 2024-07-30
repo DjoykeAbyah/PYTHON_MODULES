@@ -1,3 +1,2 @@
 Bacon
-Fries
-Pizza
+Apple

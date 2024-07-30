@@ -1,9 +1,13 @@
-# with open("../files/doc.txt") as file:  # per default set to r and closed in the with block
+date = input("Enter today's date: ")
+mood = input("How would you rate your overall mood today from 1 to 10? ")
+thoughts = input("Let your thoughts flow:\n")
+
+with open(f"../journal/{date}", 'w') as file:
+    file.write(f"mood was: {mood} + 2 * \n")
+    file.write(f"Thoughts of the day: {thoughts}")
+
+# with open("file.txt", 'r') as file:
 #     content = file.read()
-#     # file.read()
-#     # content = file.read() will print out empty string
 #
-# print(content)  # because saved in variable can be used after closed in with block
-
-
-
+# print(content)
+# print(len(content))
